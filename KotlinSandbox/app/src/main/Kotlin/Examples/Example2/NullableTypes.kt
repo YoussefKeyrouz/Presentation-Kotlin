@@ -42,19 +42,20 @@ fun foo() {
 
 //Ex2 Function return value
 fun parseInt(str: String): Int? {
-    // return null if str not integer format ...
+    // consider we return null if str not integer format ...
 
     print(str)
     return null
 }
 
 fun foo2(str1: String, str2: String) {
+
+    print(str1 + str2)
+
     val x = parseInt("1")
     val y = parseInt("2")
 
 //    val result = x * y
-
-    print(str1 + str2)
 }
 
 
