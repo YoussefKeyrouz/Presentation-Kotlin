@@ -18,6 +18,9 @@ fun foo() {
 
 //    val lenA = a.length
 //    val lenB = b.length
+
+    print(a)
+    print(b)
 }
 
 
@@ -41,6 +44,7 @@ fun foo() {
 fun parseInt(str: String): Int? {
     // return null if str not integer format ...
 
+    print(str)
     return null
 }
 
@@ -49,6 +53,8 @@ fun foo2(str1: String, str2: String) {
     val y = parseInt("2")
 
 //    val result = x * y
+
+    print(str1 + str2)
 }
 
 
@@ -57,10 +63,17 @@ fun foo2(str1: String, str2: String) {
 
 
 
-//Ex3 how to unwrap: 3 ways
+//Ex3 how to unwrap: 3 ways: ? , !! and if condition
 fun whatToDo() {
     var a: String = "hello"
     var b: String? = "world"
+
+
+
+
+
+
+    print(a+b)
 
 
 }
@@ -80,7 +93,18 @@ fun whatToDo() {
 
 //Ex4 Null Safety
 class Person {
-    var name: String? = null
+
+    //getter and setter example
+    var name: String
+    get() = "hello $name"
+    set(value) {
+        if (value.isEmpty())
+            name = "Oops"
+        else
+            name = value
+    }
+
+
     var car: Car? = null
 }
 
@@ -90,11 +114,13 @@ class Car {
 
 class CarModel {
     var name: String? = null
+
 }
 
 
 fun getPersonCarModel(person: Person): String? {
 //    return person.car.model.name
+
     return null
 }
 
