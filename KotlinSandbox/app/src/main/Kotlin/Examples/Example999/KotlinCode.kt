@@ -14,7 +14,9 @@ fun multiplyXandY(x: Int, y: Int) : Int {
 
     return result
 }
-
-fun printSum(a: Int, b: Int) {
-    print(a + b)
+class MathUtilities (var a: Int, var b: Int){
+    fun printSum() {
+        print(a + b)
+    }
 }
+
