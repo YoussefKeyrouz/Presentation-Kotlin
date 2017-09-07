@@ -66,10 +66,10 @@ open class Parent(var number: Int) {
     }
 }
 
-class Child (val myInt) : Parent(myInt) {
+class Child (val myInt: Int) : Parent(myInt) {
     //must call parent constructor
     override fun printMe() {
-
+        print(myInt)
     }
 }
 
